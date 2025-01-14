@@ -39,9 +39,20 @@ http.createServer((req, res,) => {
 
 //2.Creare un arrow function per invertire una stringa. dovrai scrivere una funzione che prenda una stringa come argomento e restituisca la stringa con i caratteri in ordine inverso
 //abbiamo solo un dato quindi togliamo le due ()
-const reverseString = stringa => {
-    //converto la stringa in array, lo splitto e poi reverso e poi trasformo di nuovo in una stringa
-    return stringa.split('').reverse().join('');
+// const reverseString = stringa => {
+//     //converto la stringa in array, lo splitto e poi reverso e poi trasformo di nuovo in una stringa
+//     return stringa.split('').reverse().join('');
+// }
+
+// console.log(reverseString('comestai'));
+
+//3.Uso del destructuring: scrivi un arrow function che accetti un oggetto come argomento, il quale avr´al suo interno la proprietà name and age e tramite il destructuring concatenare queste due proprietà in una stringa; L'utente ${name} ha ${age} anni.
+
+const yesObject = ({name, age}) => {
+    return `L'utente ${name} ha ${age} anni`;
 }
 
-console.log(reverseString('comestai'));
+console.log(yesObject({
+    name: 'Elisa',
+    age: 44
+}));
