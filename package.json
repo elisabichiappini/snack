@@ -4,7 +4,7 @@
   "main": "snack.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node snack.js"
+    "dev": "nodemon snack.js"
   },
   "keywords": [],
   "author": "",
