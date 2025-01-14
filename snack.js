@@ -34,22 +34,14 @@ http.createServer((req, res,) => {
 //     return contatore;
 // }
 
-// console.log(contaVocali('miao'));
+// console.log(contaVocali('collega'));
 
-//1* con forEach
-const contaVocali = stringa => {
-    const array = stringa.toLowerCase().split('');
-    const vocali = "aeiou";
 
-    let contatore = 0;
-    for(let i = 0; i < array.length; i++) {
-        const carattere = array[i];
-        //se le tra vocali c'è questo carattere
-        if (vocali.includes(carattere)){
-            contatore++;
-        }
-    };
-    return contatore;
+//2.Creare un arrow function per invertire una stringa. dovrai scrivere una funzione che prenda una stringa come argomento e restituisca la stringa con i caratteri in ordine inverso
+//abbiamo solo un dato quindi togliamo le due ()
+const reverseString = stringa => {
+    //converto la stringa in array, lo splitto e poi reverso e poi trasformo di nuovo in una stringa
+    return stringa.split('').reverse().join('');
 }
 
-console.log(contaVocali('miao'));
+console.log(reverseString('comestai'));
