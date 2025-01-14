@@ -48,11 +48,43 @@ http.createServer((req, res,) => {
 
 //3.Uso del destructuring: scrivi un arrow function che accetti un oggetto come argomento, il quale avr´al suo interno la proprietà name and age e tramite il destructuring concatenare queste due proprietà in una stringa; L'utente ${name} ha ${age} anni.
 
-const yesObject = ({name, age}) => {
-    return `L'utente ${name} ha ${age} anni`;
+// const yesObject = ({name, age}) => {
+//     return `L'utente ${name} ha ${age} anni`;
+// }
+
+// console.log(yesObject({
+//     name: 'Elisa',
+//     age: 44
+// }));
+
+//4:uso destructuring, dato un oggetto complesso, composto da array e oggetti, creare una funzione che restituisca un nuovo oggetto con i valori: **model**, **city**, **registration.city**, **owners[0]** e **owners[1]**
+// aggiungere una proprietà `text` dove creare la stringa `l'auto mustang è stata acquistata prima da Mario Rossi e poi da Giuseppe Verdi a Milano`
+
+const veicolo = {
+    brand: 'Ford',
+    model: 'Mustang',
+    type: 'car',
+    year: 2021,
+    color: 'red',
+    owners: [
+        "Mario Rossi",
+        'Giuseppe Verdi'
+    ],
+    registration: {
+        city: 'Budapest',
+        state: 'Budapest',
+        country: 'Italy'
+    }
 }
 
-console.log(yesObject({
-    name: 'Elisa',
-    age: 44
-}));
+const parseVeicolo = ({model, registration: {city}, owners: [firstOwner, secondOwner] }) => {
+    return {
+        model,
+        city,
+        firstOwner,
+        secondOwner,
+        text: `l'auto ${model} è stata acquistata prima da ${firstOwner} e poi da ${secondOwner} a ${city}`
+    }
+}
+
+console.log(parseVeicolo(veicolo));
