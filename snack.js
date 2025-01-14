@@ -60,31 +60,37 @@ http.createServer((req, res,) => {
 //4:uso destructuring, dato un oggetto complesso, composto da array e oggetti, creare una funzione che restituisca un nuovo oggetto con i valori: **model**, **city**, **registration.city**, **owners[0]** e **owners[1]**
 // aggiungere una proprietà `text` dove creare la stringa `l'auto mustang è stata acquistata prima da Mario Rossi e poi da Giuseppe Verdi a Milano`
 
-const veicolo = {
-    brand: 'Ford',
-    model: 'Mustang',
-    type: 'car',
-    year: 2021,
-    color: 'red',
-    owners: [
-        "Mario Rossi",
-        'Giuseppe Verdi'
-    ],
-    registration: {
-        city: 'Budapest',
-        state: 'Budapest',
-        country: 'Italy'
-    }
-}
+// const veicolo = {
+//     brand: 'Ford',
+//     model: 'Mustang',
+//     type: 'car',
+//     year: 2021,
+//     color: 'red',
+//     owners: [
+//         "Mario Rossi",
+//         'Giuseppe Verdi'
+//     ],
+//     registration: {
+//         city: 'Budapest',
+//         state: 'Budapest',
+//         country: 'Italy'
+//     }
+// }
 
-const parseVeicolo = ({model, registration: {city}, owners: [firstOwner, secondOwner] }) => {
-    return {
-        model,
-        city,
-        firstOwner,
-        secondOwner,
-        text: `l'auto ${model} è stata acquistata prima da ${firstOwner} e poi da ${secondOwner} a ${city}`
-    }
-}
+// const parseVeicolo = ({model, registration: {city}, owners: [firstOwner, secondOwner] }) => {
+//     return {
+//         model,
+//         city,
+//         firstOwner,
+//         secondOwner,
+//         text: `l'auto ${model} è stata acquistata prima da ${firstOwner} e poi da ${secondOwner} a ${city}`
+//     }
+// }
 
-console.log(parseVeicolo(veicolo));
+// console.log(parseVeicolo(veicolo));
+
+//5. Uso spread operator: scrivi un arrow function che accetti 2 array come argomenti, il return della funzione dovrà essere un unico array composto dalla fusione dei due ricevuti come argomento
+
+const mergeArray = (array1, array2) => {
+    return 
+}
