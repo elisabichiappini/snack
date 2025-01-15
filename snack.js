@@ -119,4 +119,5 @@ http.createServer((req, res,) => {
 
 //8. uso funzione map, scrivi un arrow function chiamata duplicaNumeri che accetta un array di numeri come argoomento e restituisce un array contenente i numeri del primo array, ma duplicati (ogni numero apparirà due volte nel nuovo array)
 const duplicatiNumeri2 = numeri => numeri.reduce((curr, n) => [...curr, n, n], []);
+//quando usare il reduce? quando voglio ottenere un valore o dato a partire da un array
 console.log(duplicatiNumeri2([1,2,3,4]));
