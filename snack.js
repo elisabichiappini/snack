@@ -99,13 +99,15 @@ http.createServer((req, res,) => {
 // }
 // console.log(mergeArray(obj1,obj2));
 
+// in ordine con sort()
+// const mergeArray = (arr1, arr2) => ([...arr1, ...arr2]);
+// const merge = mergeArray([99,2,8,9,4],[22,13,44,65]);
+
+// const orderArray =  merge.sort((a, b) => {
+//    return a < b ? -1 : 1;
+// })
+// console.log(orderArray);
+
 //6. funzione filter: scrivi una arrow function chiamata filtraNumeriPari che accetta un array di numeri interi come argomento e restituisce un nuovo array contenente solo i numeri pari
-
-const mergeArray = (arr1, arr2) => ([...arr1, ...arr2]);
-const merge = mergeArray([2,3,4,8,9],[22,13,44,65]);
-console.log(merge);
-
-const orderArray =  merge.sort((a, b) => {
-   return b - a;
-})
-console.log(orderArray)
+const filterNumeriPari = interi => interi.filter( numero => numero % 2 === 0);
+console.log(filterNumeriPari([1,2,3,6,7,9,12,44])); //[ 2, 6, 12, 44 ]
