@@ -106,6 +106,6 @@ const merge = mergeArray([2,3,4,8,9],[22,13,44,65]);
 console.log(merge);
 
 const orderArray =  merge.sort((a, b) => {
-   return a > b ? -1 : 1;
+   return b - a;
 })
 console.log(orderArray)
