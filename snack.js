@@ -91,10 +91,21 @@ http.createServer((req, res,) => {
 
 //5. Uso spread operator: scrivi un arrow function che accetti 2 array come argomenti, il return della funzione dovrà essere un unico array composto dalla fusione dei due ricevuti come argomento
 
-const obj1 = ['ciao', 'elisa'];
-const obj2 = ['sono', 'stanca'];
-const mergeArray = (arr1, arr2) => {
-    const objMain = [...arr1, ...arr2];
-    return objMain;
-}
-console.log(mergeArray(obj1,obj2));
+// const obj1 = ['ciao', 'elisa'];
+// const obj2 = ['sono', 'stanca'];
+// const mergeArray = (arr1, arr2) => {
+//     const objMain = [...arr1, ...arr2];
+//     return objMain;
+// }
+// console.log(mergeArray(obj1,obj2));
+
+//6. funzione filter: scrivi una arrow function chiamata filtraNumeriPari che accetta un array di numeri interi come argomento e restituisce un nuovo array contenente solo i numeri pari
+
+const mergeArray = (arr1, arr2) => ([...arr1, ...arr2]);
+const merge = mergeArray([2,3,4,8,9],[22,13,44,65]);
+console.log(merge);
+
+const orderArray =  merge.sort((a, b) => {
+   return a > b ? -1 : 1;
+})
+console.log(orderArray)
