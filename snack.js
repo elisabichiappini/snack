@@ -91,6 +91,10 @@ http.createServer((req, res,) => {
 
 //5. Uso spread operator: scrivi un arrow function che accetti 2 array come argomenti, il return della funzione dovrà essere un unico array composto dalla fusione dei due ricevuti come argomento
 
-const mergeArray = (array1, array2) => {
-    return 
+const obj1 = ['ciao', 'elisa'];
+const obj2 = ['sono', 'stanca'];
+const mergeArray = (arr1, arr2) => {
+    const objMain = [...arr1, ...arr2];
+    return objMain;
 }
+console.log(mergeArray(obj1,obj2));
