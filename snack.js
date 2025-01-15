@@ -109,5 +109,14 @@ http.createServer((req, res,) => {
 // console.log(orderArray);
 
 //6. funzione filter: scrivi una arrow function chiamata filtraNumeriPari che accetta un array di numeri interi come argomento e restituisce un nuovo array contenente solo i numeri pari
-const filterNumeriPari = interi => interi.filter( numero => numero % 2 === 0);
-console.log(filterNumeriPari([1,2,3,6,7,9,12,44])); //[ 2, 6, 12, 44 ]
+// const filterNumeriPari = interi => interi.filter( numero => numero % 2 === 0);
+// console.log(filterNumeriPari([1,2,3,6,7,9,12,44])); //[ 2, 6, 12, 44 ]
+
+//7. uso funzione map, scrivi un arrow function chiamata duplicaNumeri che accetta un array di numeri come argoomento e restituisce un array contenente i numeri del primo array, ma duplicati
+
+// const duplicaNumeri = numeri => numeri.map(n => n * 2);
+// console.log(duplicaNumeri([2,3,4])); //[ 4, 6, 8 ]
+
+//8. uso funzione map, scrivi un arrow function chiamata duplicaNumeri che accetta un array di numeri come argoomento e restituisce un array contenente i numeri del primo array, ma duplicati (ogni numero apparirà due volte nel nuovo array)
+const duplicatiNumeri2 = numeri => numeri.reduce((curr, n) => [...curr, n, n], []);
+console.log(duplicatiNumeri2([1,2,3,4]));
